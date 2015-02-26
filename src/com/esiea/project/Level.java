@@ -4,11 +4,11 @@ enum Level{
 		
 	DEBUG(1),
 	INFO(2),
-	ERROR(3);
+	ERROR(3);içpppppp
 	
 	private int levelNumber;
 	
-	private Level(int level){
+	Level(int level){
 		levelNumber = level;
 	}
 		

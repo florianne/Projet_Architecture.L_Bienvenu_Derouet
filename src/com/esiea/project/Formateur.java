@@ -1,16 +1,15 @@
 package com.esiea.project;
 
-import java.util.logging.*;
-
-public class Formateur {
-	protected Logger logger;
-	protected Level level;
+public class Formateur{
 	
-	protected void setLevel(Level level){
-		this.level = level;
-	}
-	protected void setLogger(Logger logger){
-		this.logger = logger;
+	
+	public void getFormate(Logger logger){
+		
+		System.out.println("[NAME="+logger.getName());
+	
+	//	System.out.println(" LEVEL="+logger.getLevel());
+		
+		
 	}
 	
 }

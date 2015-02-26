@@ -13,8 +13,8 @@ public class Configuration {
 
 	}
 	
-	public static void setLayout(Class<?> class1, Formateur formateur){
-		formateur.getFormate(LoggerFactory.getLogger(class1)); 
+	public static void setLayout(Class<?> class1, Formateur formateur, Level level){
+		formateur.getFormate(LoggerFactory.getLogger(class1), level); 
 	}
 	
 }

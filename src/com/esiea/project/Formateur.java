@@ -11,7 +11,6 @@ public class Formateur extends LoggerFactory{
 		
 		Date aujourdhui = new Date();
 		
-	
 		
 		DateFormat mediumDateFormat = DateFormat.getDateTimeInstance(
 		DateFormat.MEDIUM,

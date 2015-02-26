@@ -45,11 +45,18 @@ public class Logger{
 	
 	public void debug(String message){
 			level=Level.DEBUG;
+			
 			Configuration.setLevel(OurLoggerClass.class, Level.DEBUG);
 			Configuration.setLayout(OurLoggerClass.class, new Formateur(), Level.DEBUG);
 
 		System.out.println(message+"]");
-		
+		Configuration.setLevel(OurLoggerClass.class, Level.INFO);
+		Configuration.setLayout(OurLoggerClass.class, new Formateur(), Level.INFO);
+		System.out.println(message+"]");
+		Configuration.setLevel(OurLoggerClass.class, Level.ERROR);
+		Configuration.setLayout(OurLoggerClass.class, new Formateur(), Level.ERROR);
+		System.out.println(message+"]\n");
+
 		return;
 	}
 	
@@ -59,7 +66,11 @@ public class Logger{
 		Configuration.setLayout(OurLoggerClass.class, new Formateur(), Level.INFO);
 
 		System.out.println(message+"]");
+		Configuration.setLevel(OurLoggerClass.class, Level.ERROR);
+		Configuration.setLayout(OurLoggerClass.class, new Formateur(),Level.ERROR);
 
+
+		System.out.println(message+"]\n");
 		return;
 	}
 	
@@ -69,8 +80,8 @@ public class Logger{
 		Configuration.setLayout(OurLoggerClass.class, new Formateur(),Level.ERROR);
 
 
-		System.out.println(message+"]");
-
+		System.out.println(message+"]\n");
+		
 		return; 
 	}
 	

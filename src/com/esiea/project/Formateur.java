@@ -1,9 +1,7 @@
 package com.esiea.project;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.text.DateFormat;
-import java.util.Locale;
 
 public class Formateur extends LoggerFactory{
 	
@@ -20,14 +18,6 @@ public class Formateur extends LoggerFactory{
 		
 		DateFormat.MEDIUM);
 		
-		
-		DateFormat mediumDateFormatEN = DateFormat.getDateTimeInstance(
-		
-		DateFormat.MEDIUM,
-		
-		DateFormat.MEDIUM, new Locale("EN","en"));
-	
-
 		
 		System.out.print(mediumDateFormat.format(aujourdhui));
 	

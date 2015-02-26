@@ -4,7 +4,7 @@ enum Level{
 		
 	DEBUG(1),
 	INFO(2),
-	ERROR(3);içpppppp
+	ERROR(3);
 	
 	private int levelNumber;
 	

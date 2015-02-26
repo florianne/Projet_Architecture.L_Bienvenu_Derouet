@@ -5,11 +5,12 @@ public class Formateur{
 	
 	public void getFormate(Logger logger){
 		
-		System.out.println("[NAME="+logger.getName());
+		System.out.print("\n[NAME="+logger.getName());
 	
-	//	System.out.println(" LEVEL="+logger.getLevel());
+		System.out.print("LEVEL="+logger.getLevel());
 		
-		
+		System.out.print(" MESSAGE=");
+
 	}
 	
 }

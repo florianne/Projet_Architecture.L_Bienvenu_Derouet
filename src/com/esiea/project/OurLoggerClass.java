@@ -8,17 +8,14 @@ public class OurLoggerClass {
 	public void run() {
 
 		logger.debug("Test log. debug");
-
 		logger.info("Test log. info");
 		logger.error("Test log. error");
 	}
 	
 	/*
 	Configuration.ajouterCible(OurLoggerClass.class, new ConsoleCible());
-	Configuration.setLevel(OurLoggerClass.class, DEBUG);
-*/
+	*/
 	
-	//
 	
 	
 }

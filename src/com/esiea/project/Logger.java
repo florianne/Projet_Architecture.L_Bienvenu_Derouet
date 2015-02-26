@@ -8,6 +8,15 @@ public class Logger extends Formateur{
 	
 	// -----------------------------//
 		
+	public void setMessage(String message){
+		/*	System.out.println("AHHHHHHHHHHH "+level);
+			System.out.println("AHHHHHHHHHHH "+this.level);
+	*/
+			this.message=message;
+		/*	System.out.println("BHHHHHHHHHHH "+level);
+			System.out.println("BHHHHHHHHHHH "+this.level);
+			*/
+		}
 	
 	
 	// ------------------------------//
@@ -25,13 +34,13 @@ public class Logger extends Formateur{
 	
 		
 	public void setLevel(Level level){
-		System.out.println("AHHHHHHHHHHH "+level);
+	/*	System.out.println("AHHHHHHHHHHH "+level);
 		System.out.println("AHHHHHHHHHHH "+this.level);
-
+*/
 		this.level=level;
-		System.out.println("BHHHHHHHHHHH "+level);
+	/*	System.out.println("BHHHHHHHHHHH "+level);
 		System.out.println("BHHHHHHHHHHH "+this.level);
-		
+		*/
 	}
 		
 
@@ -49,13 +58,13 @@ public class Logger extends Formateur{
 	
 	
 	public void debug(String message){
-		System.out.println("before="+level);
-			Configuration.setLevel(Logger.class, Level.DEBUG);
-			System.out.println("CHHHHHHHHHHH "+level);
+		System.out.println("AAAAAAAA="+level);
+			Configuration.setLevel(OurLoggerClass.class, Level.DEBUG);
+			System.out.println("BBBBBB="+level);
 
-			//Configuration.setLayout(Logger.class, new Formateur());
+			Configuration.setLayout(OurLoggerClass.class, new Formateur());
 
-		System.out.println(message);
+		System.out.println(message+"]");
 		
 		return;
 	}

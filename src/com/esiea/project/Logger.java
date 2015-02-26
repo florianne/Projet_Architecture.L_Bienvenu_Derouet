@@ -3,7 +3,7 @@ package com.esiea.project;
 public class Logger {
 
 	private Class<?> name;
-	private String level;
+	private Level level;
 	private String message;
 	
 	
@@ -13,12 +13,12 @@ public class Logger {
 	}	
 	
 		
-	public String setLevel(String level){
+	public Level setLevel(Level level){
 		return this.level=level;
 	}
 		
 	
-	public String getLevel(){
+	public Level getLevel(){
 		return level;
 	}
 	
@@ -31,7 +31,9 @@ public class Logger {
 	
 	
 	public void debug(String message){
+		Configuration.setLevel(OurLoggerClass.class, Level.DEBUG);
 		System.out.println(message);
+		
 		return;
 	}
 	

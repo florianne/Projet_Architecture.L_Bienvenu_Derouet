@@ -8,11 +8,8 @@ public class Configuration {
 
 	}*/
 	public static void setLevel(Class<?> class1, Level level){
-			
-		public enum levelEnum{
-			
-		
-		}
-		
+		LoggerFactory.getLogger(class1).setLevel(level);
+		System.out.println(level.getLevel());
+
 	}
 }

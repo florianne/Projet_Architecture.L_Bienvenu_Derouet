@@ -1,29 +1,19 @@
 package com.esiea.project;
 
-public class Logger extends Formateur{
+public class Logger{
 
 	private Class<?> name;
-	private Level level;
+	private Level level = Level.DEBUG;
 	private String message;
 	
 	// -----------------------------//
-		
-	public void setMessage(String message){
-		/*	System.out.println("AHHHHHHHHHHH "+level);
-			System.out.println("AHHHHHHHHHHH "+this.level);
-	*/
-			this.message=message;
-		/*	System.out.println("BHHHHHHHHHHH "+level);
-			System.out.println("BHHHHHHHHHHH "+this.level);
-			*/
-		}
 	
 	
 	// ------------------------------//
 
 	public Logger(Class<?> name){
+		//System.out.println("name:"+name);
 		this.name=name;
-		
 		
 	}	
 	
@@ -34,18 +24,14 @@ public class Logger extends Formateur{
 	
 		
 	public void setLevel(Level level){
-	/*	System.out.println("AHHHHHHHHHHH "+level);
-		System.out.println("AHHHHHHHHHHH "+this.level);
-*/
+	
 		this.level=level;
-	/*	System.out.println("BHHHHHHHHHHH "+level);
-		System.out.println("BHHHHHHHHHHH "+this.level);
-		*/
+	
 	}
 		
 
 	public Level getLevel(){
-		System.out.println("level="+level);
+		//System.out.println("level="+level);
 		return level;
 	}
 	
@@ -58,10 +44,8 @@ public class Logger extends Formateur{
 	
 	
 	public void debug(String message){
-		System.out.println("AAAAAAAA="+level);
+			level=Level.DEBUG;
 			Configuration.setLevel(OurLoggerClass.class, Level.DEBUG);
-			System.out.println("BBBBBB="+level);
-
 			Configuration.setLayout(OurLoggerClass.class, new Formateur());
 
 		System.out.println(message+"]");
@@ -70,16 +54,23 @@ public class Logger extends Formateur{
 	}
 	
 	public void info(String message){
-		//Configuration.setLevel(Logger.class, Level.INFO);
+		level=Level.INFO;
+		Configuration.setLevel(Logger.class, Level.INFO);
+		Configuration.setLayout(OurLoggerClass.class, new Formateur());
 
-		//System.out.println(message);
+		System.out.println(message+"]");
+
 		return;
 	}
 	
 	public void error(String message){
-		//Configuration.setLevel(OurLoggerClass.class, Level.ERROR);
+		level=Level.ERROR;
+		Configuration.setLevel(OurLoggerClass.class, Level.ERROR);
+		Configuration.setLayout(OurLoggerClass.class, new Formateur());
 
-		//System.out.println(message);
+
+		System.out.println(message+"]");
+
 		return; 
 	}
 	

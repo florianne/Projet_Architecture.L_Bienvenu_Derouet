@@ -52,9 +52,11 @@ public class Logger{
 		System.out.println(message+"]");
 		Configuration.setLevel(OurLoggerClass.class, Level.INFO);
 		Configuration.setLayout(OurLoggerClass.class, new Formateur(), Level.INFO);
+		message= "Test log. info";
 		System.out.println(message+"]");
 		Configuration.setLevel(OurLoggerClass.class, Level.ERROR);
 		Configuration.setLayout(OurLoggerClass.class, new Formateur(), Level.ERROR);
+		message= "Test log. error";
 		System.out.println(message+"]\n");
 
 		return;
@@ -62,15 +64,20 @@ public class Logger{
 	
 	public void info(String message){
 		level=Level.INFO;
+		
 		Configuration.setLevel(Logger.class, Level.INFO);
 		Configuration.setLayout(OurLoggerClass.class, new Formateur(), Level.INFO);
-
+		
+		message= "Test log. info";
 		System.out.println(message+"]");
+
+		
 		Configuration.setLevel(OurLoggerClass.class, Level.ERROR);
 		Configuration.setLayout(OurLoggerClass.class, new Formateur(),Level.ERROR);
 
-
+		message= "Test log. error";
 		System.out.println(message+"]\n");
+		
 		return;
 	}
 	

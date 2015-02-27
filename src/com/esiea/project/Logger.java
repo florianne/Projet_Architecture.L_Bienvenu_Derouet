@@ -7,8 +7,7 @@ public class Logger{
 	private String message;
 	
 	// -----------------------------//
-	
-	
+		
 	// ------------------------------//
 
 	public Logger(Class<?> name){
